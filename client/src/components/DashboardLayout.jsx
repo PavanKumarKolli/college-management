@@ -48,12 +48,7 @@ export default function DashboardLayout() {
         <div className="dashboard">
             <div className={`sidebar-overlay ${sidebarOpen ? 'open' : ''}`} onClick={() => setSidebarOpen(false)} />
 
-            <motion.aside
-                className={`sidebar ${sidebarOpen ? 'open' : ''}`}
-                initial={{ x: -260 }}
-                animate={{ x: 0 }}
-                transition={{ duration: 0.3 }}
-            >
+            <aside className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
                 <div className="sidebar-header">
                     <div className="sidebar-logo">🎓</div>
                     <div>
@@ -89,7 +84,7 @@ export default function DashboardLayout() {
                         <FiLogOut /> Logout
                     </button>
                 </div>
-            </motion.aside>
+            </aside>
 
             <div className="main-content">
                 <div className="topbar">
